@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahul Mittal | Portfolio</title>
+  
+  <!-- Add Google Fonts: Outfit for Headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="dd.css"/>
+</head>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<body>
+
+  <!-- Theme Toggle -->
+  <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <h1>Hello, I'm <span>Rahul Mittal</span></h1>
+    <p><span id="typing"></span></p>
+    <a href="#contact" class="btn">Let’s Connect</a>
+  </header>
+
+  <!-- About -->
+  <section class="about fade-in" id="about">
+    <h2>About Me</h2>
+    <p>I build modern, responsive websites and apps. Passionate about frontend tech and UI/UX.</p>
+  </section>
+
+  <!-- Skills -->
+ <section class="skills fade-in" id="skills">
+  <h2>Skills</h2>
+  <div class="skill-tags">
+    <span><i class="fab fa-html5 icon-html"></i> HTML</span>
+    <span><i class="fab fa-css3-alt icon-css"></i> CSS</span>
+    <span><i class="fab fa-js icon-js"></i> JavaScript</span>
+    <span><i class="fab fa-react icon-react"></i> React</span>
+    <span><i class="fab fa-git-alt icon-git"></i> Git</span>
+  </div>
+</section>
+
+
+  <!-- Projects -->
+  <section class="projects fade-in" id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>My Portfolio</h3>
+        <p>Responsive and animated portfolio built with HTML, CSS & JS.</p>
+        <div class="card-links">
+          <a href="#" class="card-btn live" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="#" class="card-btn github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>ToDo App</h3>
+        <p>Built using React & local storage with a great user interface.</p>
+        <div class="card-links">
+          <a href="#" class="card-btn live" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="#" class="card-btn github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact fade-in" id="contact">
+  <h2>Contact Me</h2>
+  <form id="contact-form">
+    <input type="text" name="from_name" placeholder="Your Name" required>
+    <input type="email" name="from_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="form-message" class="feedback"></p>
+  </form>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Rahul Mittal</p>
+  </footer>
+
+  <script src="scriptt.js"></script>
+</body>
+</html>
+
+
