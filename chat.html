@@ -3,102 +3,438 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rahul Mittal | Portfolio</title>
-  
-  <!-- Add Google Fonts: Outfit for Headings, Inter for body text -->
+  <title>Rahul Mittal | Portfolio — Engineering Student & Developer</title>
+  <meta name="description" content="Portfolio of Rahul Mittal — 3rd year engineering student, full-stack developer, and tech enthusiast building projects with Python, C++, and modern web technologies.">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
-  
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
   <link rel="stylesheet" href="dd.css"/>
 </head>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
 <body>
 
-  <!-- Theme Toggle -->
-  <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
-
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">RM<span>.</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="toggle-theme" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- ===== HERO ===== -->
   <header class="hero" id="home">
-    <h1>Hello, I'm <span>Rahul Mittal</span></h1>
-    <p><span id="typing"></span></p>
-    <a href="#contact" class="btn">Let’s Connect</a>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">👋 Hello, I'm</p>
+      <h1 class="hero-name">Rahul <span class="gradient-text">Mittal</span></h1>
+      <div class="hero-role">
+        <span class="role-prefix">I'm a </span>
+        <span class="typing-wrapper">
+          <span id="typing"></span>
+          <span class="cursor">|</span>
+        </span>
+      </div>
+      <p class="hero-description">
+        3rd Year Engineering Student passionate about building real-world applications
+        with Python, C++, and modern web technologies.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Rahul025-max" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:rahul@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </header>
 
-  <!-- About -->
-  <section class="about fade-in" id="about">
-    <h2>About Me</h2>
-    <p>I build modern, responsive websites and apps. Passionate about frontend tech and UI/UX.</p>
-  </section>
-
-  <!-- Skills -->
- <section class="skills fade-in" id="skills">
-  <h2>Skills</h2>
-  <div class="skill-tags">
-    <span><i class="fab fa-html5 icon-html"></i> HTML</span>
-    <span><i class="fab fa-css3-alt icon-css"></i> CSS</span>
-    <span><i class="fab fa-js icon-js"></i> JavaScript</span>
-    <span><i class="fab fa-react icon-react"></i> React</span>
-    <span><i class="fab fa-git-alt icon-git"></i> Git</span>
-  </div>
-</section>
-
-
-  <!-- Projects -->
-  <section class="projects fade-in" id="projects">
-    <h2>Projects</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>My Portfolio</h3>
-        <p>Responsive and animated portfolio built with HTML, CSS & JS.</p>
-        <div class="card-links">
-          <a href="#" class="card-btn live" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-          <a href="#" class="card-btn github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="section-container">
+      <h2 class="section-title fade-in">About <span class="gradient-text">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <p>
+            I'm a <strong>3rd year Engineering student</strong> with a deep curiosity for technology and problem-solving. 
+            My journey started with C++ and competitive programming, and has since expanded into 
+            <strong>Python development</strong>, <strong>web technologies</strong>, and building full-stack applications.
+          </p>
+          <p>
+            I love turning ideas into reality through code — whether it's a data-driven Python tool, 
+            a responsive website, or a creative side project. I'm always learning, always building.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="10">0</span>+
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="5">0</span>+
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-label">Years Coding</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <h3>ToDo App</h3>
-        <p>Built using React & local storage with a great user interface.</p>
-        <div class="card-links">
-          <a href="#" class="card-btn live" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-          <a href="#" class="card-btn github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <div class="about-highlights fade-in">
+          <div class="highlight-card glass-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Education</h3>
+            <p>B.Tech — 3rd Year<br>Engineering Student</p>
+          </div>
+          <div class="highlight-card glass-card">
+            <i class="fas fa-code"></i>
+            <h3>Focus Areas</h3>
+            <p>Web Dev, Python<br>DSA with C++</p>
+          </div>
+          <div class="highlight-card glass-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Interests</h3>
+            <p>Open Source, AI/ML<br>Building Tools</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact fade-in" id="contact">
-  <h2>Contact Me</h2>
-  <form id="contact-form">
-    <input type="text" name="from_name" placeholder="Your Name" required>
-    <input type="email" name="from_email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-    <p id="form-message" class="feedback"></p>
-  </form>
-</section>
+  <!-- ===== SKILLS ===== -->
+  <section class="skills" id="skills">
+    <div class="section-container">
+      <h2 class="section-title fade-in">My <span class="gradient-text">Skills</span></h2>
+      <div class="skills-grid">
 
+        <!-- Languages -->
+        <div class="skill-category fade-in glass-card">
+          <div class="skill-category-header">
+            <i class="fas fa-terminal"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-python" style="color: #3776ab;"></i>
+              <span>Python</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-code" style="color: #00599c;"></i>
+              <span>C++</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-js" style="color: #f7df1e;"></i>
+              <span>JavaScript</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database" style="color: #336791;"></i>
+              <span>SQL</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+          </div>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Rahul Mittal</p>
+        <!-- Web Development -->
+        <div class="skill-category fade-in glass-card">
+          <div class="skill-category-header">
+            <i class="fas fa-globe"></i>
+            <h3>Web Development</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-html5" style="color: #e34c26;"></i>
+              <span>HTML5</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-css3-alt" style="color: #2965f1;"></i>
+              <span>CSS3</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-react" style="color: #61dafb;"></i>
+              <span>React</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-node-js" style="color: #68a063;"></i>
+              <span>Node.js</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Others -->
+        <div class="skill-category fade-in glass-card">
+          <div class="skill-category-header">
+            <i class="fas fa-wrench"></i>
+            <h3>Tools & Others</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-git-alt" style="color: #f05032;"></i>
+              <span>Git & GitHub</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-linux" style="color: #fcc624;"></i>
+              <span>Linux</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-terminal" style="color: #4ec9b0;"></i>
+              <span>VS Code</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-figma" style="color: #a259ff;"></i>
+              <span>Figma</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <div class="section-container">
+      <h2 class="section-title fade-in">My <span class="gradient-text">Projects</span></h2>
+      <p class="section-subtitle fade-in">A collection of projects I've built across different technologies</p>
+
+      <!-- Project Filter Buttons -->
+      <div class="project-filters fade-in">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="cpp">C++</button>
+      </div>
+
+      <div class="project-grid">
+
+        <!-- Project 1: Portfolio Website -->
+        <div class="project-card fade-in glass-card" data-category="web">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" target="_blank" class="project-icon-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/Rahul025-max" target="_blank" class="project-icon-link" title="Source Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Portfolio Website</h3>
+            <p>A responsive and animated personal portfolio built from scratch with modern design, glassmorphism effects, and smooth animations.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank" class="btn btn-small btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/Rahul025-max" target="_blank" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: ToDo App -->
+        <div class="project-card fade-in glass-card" data-category="web">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" target="_blank" class="project-icon-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/Rahul025-max" target="_blank" class="project-icon-link" title="Source Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>ToDo App</h3>
+            <p>A clean, feature-rich task manager built with React featuring local storage persistence, drag-and-drop, and dark mode.</p>
+            <div class="project-tech">
+              <span>React</span><span>CSS</span><span>LocalStorage</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank" class="btn btn-small btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/Rahul025-max" target="_blank" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Python Automation Tool -->
+        <div class="project-card fade-in glass-card" data-category="python">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <i class="fab fa-python"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/Rahul025-max" target="_blank" class="project-icon-link" title="Source Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Python Automation Tool</h3>
+            <p>An automation script that organizes files, sends email reports, and scrapes data from the web using Python libraries.</p>
+            <div class="project-tech">
+              <span>Python</span><span>BeautifulSoup</span><span>Selenium</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rahul025-max" target="_blank" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Weather Dashboard -->
+        <div class="project-card fade-in glass-card" data-category="web">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" target="_blank" class="project-icon-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/Rahul025-max" target="_blank" class="project-icon-link" title="Source Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Weather Dashboard</h3>
+            <p>A real-time weather application that fetches live data from OpenWeatherMap API with a beautiful UI and city search.</p>
+            <div class="project-tech">
+              <span>JavaScript</span><span>API</span><span>CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank" class="btn btn-small btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/Rahul025-max" target="_blank" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: DSA Problem Tracker (C++) -->
+        <div class="project-card fade-in glass-card" data-category="cpp">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <i class="fas fa-sitemap"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/Rahul025-max" target="_blank" class="project-icon-link" title="Source Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>DSA Problem Tracker</h3>
+            <p>A C++ console application to track, categorize, and review solved DSA problems with progress statistics and revision reminders.</p>
+            <div class="project-tech">
+              <span>C++</span><span>OOP</span><span>File I/O</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rahul025-max" target="_blank" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="section-container">
+      <h2 class="section-title fade-in">Get In <span class="gradient-text">Touch</span></h2>
+      <p class="section-subtitle fade-in">Have a project in mind or just want to say hi? Feel free to reach out!</p>
+
+      <div class="contact-grid">
+        <div class="contact-info fade-in">
+          <div class="contact-item glass-card">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>rahul@example.com</p>
+            </div>
+          </div>
+          <div class="contact-item glass-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>India</p>
+            </div>
+          </div>
+          <div class="contact-item glass-card">
+            <i class="fab fa-github"></i>
+            <div>
+              <h4>GitHub</h4>
+              <p>github.com/Rahul025-max</p>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/Rahul025-max" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form fade-in glass-card">
+          <div class="form-group">
+            <input type="text" name="from_name" id="input-name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="from_email" id="input-email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" id="input-subject" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <textarea name="message" id="input-message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p id="form-message" class="feedback"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <a href="#home" class="footer-logo">RM<span>.</span></a>
+      <p>Designed & Built by <strong>Rahul Mittal</strong></p>
+      <p class="footer-copy">&copy; 2025 — All Rights Reserved</p>
+    </div>
   </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <script src="scriptt.js"></script>
 </body>
 </html>
-
-
