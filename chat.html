@@ -40,35 +40,53 @@
 
   <!-- ===== HERO ===== -->
   <header class="hero" id="home">
+    <!-- Glass Background Blobs -->
+    <div class="glass-bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    
     <div class="hero-particles" id="particles"></div>
-    <div class="hero-content">
-      <p class="hero-greeting">👋 Hello, I'm</p>
-      <h1 class="hero-name">Rahul <span class="gradient-text">Mittal</span></h1>
-      <div class="hero-role">
-        <span class="role-prefix">I'm a </span>
-        <span class="typing-wrapper">
-          <span id="typing"></span>
-          <span class="cursor">|</span>
-        </span>
+    
+    <div class="hero-container section-container">
+      <div class="hero-content">
+        <p class="hero-greeting fade-in">👋 Hello, I'm</p>
+        <h1 class="hero-name fade-in">Rahul <span class="gradient-text">Mittal</span></h1>
+        <div class="hero-role fade-in">
+          <span class="role-prefix">I'm a </span>
+          <span class="typing-wrapper">
+            <span id="typing"></span>
+            <span class="cursor">|</span>
+          </span>
+        </div>
+        <p class="hero-description fade-in">
+          3rd Year Engineering Student passionate about building real-world applications
+          with Python, C++, and modern web technologies.
+        </p>
+        <div class="hero-cta fade-in">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+        </div>
+        <div class="hero-socials fade-in">
+          <a href="https://github.com/codingwithrahul965" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:rahul@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
       </div>
-      <p class="hero-description">
-        3rd Year Engineering Student passionate about building real-world applications
-        with Python, C++, and modern web technologies.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-rocket"></i> View Projects
-        </a>
-        <a href="#contact" class="btn btn-outline">
-          <i class="fas fa-envelope"></i> Contact Me
-        </a>
-      </div>
-      <div class="hero-socials">
-        <a href="https://github.com/Rahul025-max" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:rahul@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+
+      <div class="hero-image-container fade-in">
+        <div class="hero-image-wrapper">
+          <img src="images/profile.png" alt="Rahul Mittal" class="hero-image">
+          <div class="hero-image-backdrop"></div>
+        </div>
       </div>
     </div>
+
     <div class="scroll-indicator">
       <span>Scroll Down</span>
       <i class="fas fa-chevron-down"></i>
@@ -437,4 +455,4 @@
 
   <script src="scriptt.js"></script>
 </body>
-</html>
+</html> 
