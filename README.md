@@ -1,24 +1,71 @@
-# Portfolio Website
+# 👋 Rahul Mittal
 
-This is my personal portfolio website built to showcase my projects, skills, and learning journey.
+🚀 Passionate Web Developer & CSE Data Science Student  
+💻 Learning Full Stack Web Development + DSA  
+⚡ Building projects using AI tools and modern technologies  
+🌱 Currently learning HTML, CSS, JavaScript, React & Backend Development  
 
-## Features
-- Responsive Design
-- Projects Section
-- Skills Section
-- About Me
-- Contact Information
+---
 
-## Tech Stack
+# 🛠 Tech Stack
+
+## Frontend
 - HTML
 - CSS
 - JavaScript
+- Tailwind CSS
+- React.js
 
-## Purpose
-This portfolio represents my work, projects, and progress as a Computer Science student.
+## Backend
+- Node.js
+- Express.js
 
-## Future Improvements
-- Add animations
-- Dark mode
-- More projects
-- Backend integration
+## Database
+- MongoDB
+
+## Tools & Platforms
+- Git
+- GitHub
+- VS Code
+- Postman
+- Figma
+
+---
+
+# 📌 Current Goals
+
+- Master Web Development
+- Improve DSA using C++
+- Build AI-powered projects
+- Participate in Hackathons
+- Create strong GitHub portfolio
+
+---
+
+# 🚀 Projects
+
+## 🌐 Portfolio Website
+Personal portfolio website showcasing my skills and projects.
+
+## 🤖 AI Web Projects
+Building modern AI-integrated web applications.
+
+## 📚 DSA Practice Repository
+Daily Data Structures & Algorithms solutions in C++.
+
+---
+
+# 📈 GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true)
+
+---
+
+# 📫 Connect With Me
+
+- GitHub: https://github.com/
+- LinkedIn:
+
+---
+
+⭐ Always learning and building new things.
