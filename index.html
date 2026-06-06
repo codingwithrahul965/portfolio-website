@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rahul Mittal | Portfolio — Engineering Student & Developer</title>
-  <meta name="description" content="Portfolio of Rahul Mittal — 3rd year engineering student, full-stack developer, and tech enthusiast building projects with Python, C++, and modern web technologies.">
+  <title>Rahul Mittal | Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Rahul Mittal, a 3rd year engineering student building web, Python, automation, and C++ projects with practical problem-solving focus.">
+  <meta name="theme-color" content="#050816">
+  <meta property="og:title" content="Rahul Mittal | Developer Portfolio">
+  <meta property="og:description" content="Engineering student portfolio with web, Python, automation, and C++ projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,18 +23,23 @@
 </head>
 <body>
 
+  <!-- Cursor Glow Spotlight -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-logo">RM<span>.</span></a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <i class="fas fa-bars"></i>
       </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Journey</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Proof</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <button class="toggle-theme" id="theme-toggle" aria-label="Toggle theme">
@@ -51,7 +61,7 @@
     
     <div class="hero-container section-container">
       <div class="hero-content">
-        <p class="hero-greeting fade-in">👋 Hello, I'm</p>
+        <p class="hero-greeting fade-in">Hello, I'm</p>
         <h1 class="hero-name fade-in">Rahul <span class="gradient-text">Mittal</span></h1>
         <div class="hero-role fade-in">
           <span class="role-prefix">I'm a </span>
@@ -61,21 +71,26 @@
           </span>
         </div>
         <p class="hero-description fade-in">
-          3rd Year Engineering Student passionate about building real-world applications
-          with Python, C++, and modern web technologies.
+          3rd year engineering student focused on building practical software with Python,
+          C++, JavaScript, and modern web fundamentals. I turn small problems into shipped,
+          readable, user-friendly projects.
         </p>
+        <div class="hero-proof fade-in" aria-label="Portfolio highlights">
+          <span><strong>10+</strong> projects</span>
+          <span><strong>3</strong> years coding</span>
+          <span><strong>Open</strong> to internships</span>
+        </div>
         <div class="hero-cta fade-in">
           <a href="#projects" class="btn btn-primary">
-            <i class="fas fa-rocket"></i> View Projects
+            <i class="fas fa-rocket"></i> View Case Studies
           </a>
           <a href="#contact" class="btn btn-outline">
             <i class="fas fa-envelope"></i> Contact Me
           </a>
         </div>
         <div class="hero-socials fade-in">
-          <a href="https://github.com/codingwithrahul965" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="mailto:rahul@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/codingwithrahul965" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:217455023+codingwithrahul965@users.noreply.github.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
 
@@ -126,18 +141,24 @@
         <div class="about-highlights fade-in">
           <div class="highlight-card glass-card">
             <i class="fas fa-graduation-cap"></i>
-            <h3>Education</h3>
-            <p>B.Tech — 3rd Year<br>Engineering Student</p>
+            <div>
+              <h3>Education</h3>
+              <p>B.Tech — 3rd Year<br>Engineering Student</p>
+            </div>
           </div>
           <div class="highlight-card glass-card">
             <i class="fas fa-code"></i>
-            <h3>Focus Areas</h3>
-            <p>Web Dev, Python<br>DSA with C++</p>
+            <div>
+              <h3>Focus Areas</h3>
+              <p>Web Dev, Python<br>DSA with C++</p>
+            </div>
           </div>
           <div class="highlight-card glass-card">
             <i class="fas fa-lightbulb"></i>
-            <h3>Interests</h3>
-            <p>Open Source, AI/ML<br>Building Tools</p>
+            <div>
+              <h3>Interests</h3>
+              <p>Open Source, AI/ML<br>Building Tools</p>
+            </div>
           </div>
         </div>
       </div>
@@ -148,6 +169,7 @@
   <section class="skills" id="skills">
     <div class="section-container">
       <h2 class="section-title fade-in">My <span class="gradient-text">Skills</span></h2>
+      <p class="section-subtitle fade-in">Technologies and tools I work with to bring ideas to life</p>
       <div class="skills-grid">
 
         <!-- Languages -->
@@ -244,21 +266,60 @@
     </div>
   </section>
 
+  <!-- ===== EXPERIENCE / JOURNEY (NEW) ===== -->
+  <section class="experience" id="experience">
+    <div class="section-container">
+      <h2 class="section-title fade-in">My <span class="gradient-text">Journey</span></h2>
+      <p class="section-subtitle fade-in">A timeline of my growth as a developer and student</p>
+
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <span class="timeline-date">2024 — Present</span>
+          <h3 class="timeline-title">Full-Stack Web Development</h3>
+          <p class="timeline-subtitle">Self-Directed Learning</p>
+          <p class="timeline-desc">Building responsive web applications with HTML, CSS, JavaScript, React, and Node.js. Created multiple projects from scratch including this portfolio.</p>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <span class="timeline-date">2023 — Present</span>
+          <h3 class="timeline-title">Python & Automation</h3>
+          <p class="timeline-subtitle">Projects & Tools</p>
+          <p class="timeline-desc">Developed automation scripts, web scrapers with BeautifulSoup & Selenium, and data analysis tools. Exploring AI/ML fundamentals.</p>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <span class="timeline-date">2023</span>
+          <h3 class="timeline-title">B.Tech Engineering</h3>
+          <p class="timeline-subtitle">University Enrollment</p>
+          <p class="timeline-desc">Began my engineering degree with a strong focus on computer science fundamentals, data structures, and algorithms.</p>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <span class="timeline-date">2022</span>
+          <h3 class="timeline-title">Started Competitive Programming</h3>
+          <p class="timeline-subtitle">C++ & DSA</p>
+          <p class="timeline-desc">Started my coding journey with C++, diving deep into data structures and algorithms through competitive programming platforms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== PROJECTS ===== -->
   <section class="projects" id="projects">
     <div class="section-container">
       <h2 class="section-title fade-in">My <span class="gradient-text">Projects</span></h2>
-      <p class="section-subtitle fade-in">A collection of projects I've built across different technologies</p>
+      <p class="section-subtitle fade-in">Selected work with clear problems, implementation details, and next-step proof.</p>
 
       <!-- Project Filter Buttons -->
       <div class="project-filters fade-in">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web Dev</button>
-        <button class="filter-btn" data-filter="python">Python</button>
-        <button class="filter-btn" data-filter="cpp">C++</button>
+        <button class="filter-btn active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="web" type="button">Web Dev</button>
+        <button class="filter-btn" data-filter="python" type="button">Python</button>
+        <button class="filter-btn" data-filter="cpp" type="button">C++</button>
       </div>
 
-      <div class="project-grid">
+      <div class="project-marquee-wrapper">
+        <div class="project-grid" id="project-marquee">
 
         <!-- Project 1: Portfolio Website -->
         <div class="project-card fade-in glass-card" data-category="web">
@@ -267,19 +328,21 @@
               <i class="fas fa-laptop-code"></i>
             </div>
             <div class="project-overlay">
-              <a href="#" target="_blank" class="project-icon-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/Rahul025-max" target="_blank" class="project-icon-link" title="Source Code"><i class="fab fa-github"></i></a>
+              <a href="index.html" class="project-icon-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/codingwithrahul965?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repositories"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <div class="project-info">
+            <p class="project-status">Featured case study</p>
             <h3>Portfolio Website</h3>
-            <p>A responsive and animated personal portfolio built from scratch with modern design, glassmorphism effects, and smooth animations.</p>
+            <p><strong>Problem:</strong> create a personal brand that communicates skills, projects, and contact paths without a framework.</p>
+            <p><strong>Built:</strong> responsive layout, theme toggle, project filtering, animated counters, and accessibility-focused controls.</p>
             <div class="project-tech">
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
             <div class="project-links">
-              <a href="#" target="_blank" class="btn btn-small btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-              <a href="https://github.com/Rahul025-max" target="_blank" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Code</a>
+              <a href="index.html" class="btn btn-small btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <button class="btn btn-small btn-outline project-case-btn" type="button" data-case="portfolio"><i class="fas fa-layer-group"></i> Case Study</button>
             </div>
           </div>
         </div>
@@ -291,19 +354,21 @@
               <i class="fas fa-check-circle"></i>
             </div>
             <div class="project-overlay">
-              <a href="#" target="_blank" class="project-icon-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/Rahul025-max" target="_blank" class="project-icon-link" title="Source Code"><i class="fab fa-github"></i></a>
+              <button class="project-icon-link project-case-icon" type="button" data-case="todo" title="View Case Study"><i class="fas fa-layer-group"></i></button>
+              <a href="https://github.com/codingwithrahul965?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repositories"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <div class="project-info">
+            <p class="project-status">Productivity UI</p>
             <h3>ToDo App</h3>
-            <p>A clean, feature-rich task manager built with React featuring local storage persistence, drag-and-drop, and dark mode.</p>
+            <p><strong>Problem:</strong> help users capture, organize, and complete tasks without losing state between sessions.</p>
+            <p><strong>Built:</strong> local storage persistence, task filters, completion states, and dark-mode friendly UI patterns.</p>
             <div class="project-tech">
               <span>React</span><span>CSS</span><span>LocalStorage</span>
             </div>
             <div class="project-links">
-              <a href="#" target="_blank" class="btn btn-small btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-              <a href="https://github.com/Rahul025-max" target="_blank" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Code</a>
+              <button class="btn btn-small btn-primary project-case-btn" type="button" data-case="todo"><i class="fas fa-layer-group"></i> Case Study</button>
+              <a href="https://github.com/codingwithrahul965?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Repos</a>
             </div>
           </div>
         </div>
@@ -315,17 +380,21 @@
               <i class="fab fa-python"></i>
             </div>
             <div class="project-overlay">
-              <a href="https://github.com/Rahul025-max" target="_blank" class="project-icon-link" title="Source Code"><i class="fab fa-github"></i></a>
+              <button class="project-icon-link project-case-icon" type="button" data-case="automation" title="View Case Study"><i class="fas fa-layer-group"></i></button>
+              <a href="https://github.com/codingwithrahul965?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repositories"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <div class="project-info">
+            <p class="project-status">Automation utility</p>
             <h3>Python Automation Tool</h3>
-            <p>An automation script that organizes files, sends email reports, and scrapes data from the web using Python libraries.</p>
+            <p><strong>Problem:</strong> reduce repetitive file cleanup and data collection tasks that waste time during study/work.</p>
+            <p><strong>Built:</strong> file organization, scraping workflow, reporting flow, and reusable Python modules.</p>
             <div class="project-tech">
               <span>Python</span><span>BeautifulSoup</span><span>Selenium</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Rahul025-max" target="_blank" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Code</a>
+              <button class="btn btn-small btn-primary project-case-btn" type="button" data-case="automation"><i class="fas fa-layer-group"></i> Case Study</button>
+              <a href="https://github.com/codingwithrahul965?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Repos</a>
             </div>
           </div>
         </div>
@@ -337,19 +406,21 @@
               <i class="fas fa-cloud-sun"></i>
             </div>
             <div class="project-overlay">
-              <a href="#" target="_blank" class="project-icon-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/Rahul025-max" target="_blank" class="project-icon-link" title="Source Code"><i class="fab fa-github"></i></a>
+              <button class="project-icon-link project-case-icon" type="button" data-case="weather" title="View Case Study"><i class="fas fa-layer-group"></i></button>
+              <a href="https://github.com/codingwithrahul965?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repositories"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <div class="project-info">
+            <p class="project-status">API project</p>
             <h3>Weather Dashboard</h3>
-            <p>A real-time weather application that fetches live data from OpenWeatherMap API with a beautiful UI and city search.</p>
+            <p><strong>Problem:</strong> make live weather lookup usable with clear city search, loading feedback, and error states.</p>
+            <p><strong>Built:</strong> API calls, async JavaScript, search validation, and responsive forecast cards.</p>
             <div class="project-tech">
               <span>JavaScript</span><span>API</span><span>CSS</span>
             </div>
             <div class="project-links">
-              <a href="#" target="_blank" class="btn btn-small btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-              <a href="https://github.com/Rahul025-max" target="_blank" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Code</a>
+              <button class="btn btn-small btn-primary project-case-btn" type="button" data-case="weather"><i class="fas fa-layer-group"></i> Case Study</button>
+              <a href="https://github.com/codingwithrahul965?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Repos</a>
             </div>
           </div>
         </div>
@@ -361,21 +432,68 @@
               <i class="fas fa-sitemap"></i>
             </div>
             <div class="project-overlay">
-              <a href="https://github.com/Rahul025-max" target="_blank" class="project-icon-link" title="Source Code"><i class="fab fa-github"></i></a>
+              <button class="project-icon-link project-case-icon" type="button" data-case="dsa" title="View Case Study"><i class="fas fa-layer-group"></i></button>
+              <a href="https://github.com/codingwithrahul965?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repositories"><i class="fab fa-github"></i></a>
             </div>
           </div>
           <div class="project-info">
+            <p class="project-status">C++ fundamentals</p>
             <h3>DSA Problem Tracker</h3>
-            <p>A C++ console application to track, categorize, and review solved DSA problems with progress statistics and revision reminders.</p>
+            <p><strong>Problem:</strong> keep DSA practice organized by topic, difficulty, revision status, and solved history.</p>
+            <p><strong>Built:</strong> OOP models, file I/O persistence, progress summaries, and revision reminders.</p>
             <div class="project-tech">
               <span>C++</span><span>OOP</span><span>File I/O</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Rahul025-max" target="_blank" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Code</a>
+              <button class="btn btn-small btn-primary project-case-btn" type="button" data-case="dsa"><i class="fas fa-layer-group"></i> Case Study</button>
+              <a href="https://github.com/codingwithrahul965?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline"><i class="fab fa-github"></i> Repos</a>
             </div>
           </div>
         </div>
 
+        </div>
+      </div>
+
+      <dialog class="case-dialog" id="case-study-dialog" aria-labelledby="case-study-title">
+        <button class="case-dialog-close" type="button" id="case-study-close" aria-label="Close case study">
+          <i class="fas fa-xmark"></i>
+        </button>
+        <p class="project-status" id="case-study-type">Case Study</p>
+        <h3 id="case-study-title">Project Case Study</h3>
+        <p id="case-study-problem"></p>
+        <ul id="case-study-points"></ul>
+        <p class="case-study-next" id="case-study-next"></p>
+      </dialog>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS / PROOF ===== -->
+  <section class="achievements" id="achievements">
+    <div class="section-container">
+      <h2 class="section-title fade-in">Proof Of <span class="gradient-text">Growth</span></h2>
+      <p class="section-subtitle fade-in">Signals that show consistency, fundamentals, and real development progress.</p>
+
+      <div class="achievement-grid">
+        <div class="achievement-card glass-card fade-in">
+          <i class="fas fa-diagram-project"></i>
+          <h3>Project Builder</h3>
+          <p>Built 10+ learning projects across web development, Python automation, and C++ fundamentals.</p>
+        </div>
+        <div class="achievement-card glass-card fade-in">
+          <i class="fas fa-code-branch"></i>
+          <h3>DSA Practice</h3>
+          <p>Practicing data structures and algorithms in C++ with a focus on revision and pattern recognition.</p>
+        </div>
+        <div class="achievement-card glass-card fade-in">
+          <i class="fas fa-screwdriver-wrench"></i>
+          <h3>Tool Mindset</h3>
+          <p>Exploring automation, APIs, and practical utilities that solve small but repeatable problems.</p>
+        </div>
+        <div class="achievement-card glass-card fade-in">
+          <i class="fas fa-user-graduate"></i>
+          <h3>Student Developer</h3>
+          <p>3rd year engineering student actively building a portfolio that connects coursework with shipped projects.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -384,7 +502,7 @@
   <section class="contact" id="contact">
     <div class="section-container">
       <h2 class="section-title fade-in">Get In <span class="gradient-text">Touch</span></h2>
-      <p class="section-subtitle fade-in">Have a project in mind or just want to say hi? Feel free to reach out!</p>
+      <p class="section-subtitle fade-in">Have an internship lead, collaboration idea, or project feedback? Reach out directly.</p>
 
       <div class="contact-grid">
         <div class="contact-info fade-in">
@@ -392,7 +510,7 @@
             <i class="fas fa-envelope"></i>
             <div>
               <h4>Email</h4>
-              <p>rahul@example.com</p>
+              <p>217455023+codingwithrahul965@users.noreply.github.com</p>
             </div>
           </div>
           <div class="contact-item glass-card">
@@ -406,14 +524,12 @@
             <i class="fab fa-github"></i>
             <div>
               <h4>GitHub</h4>
-              <p>github.com/Rahul025-max</p>
+              <p>github.com/codingwithrahul965</p>
             </div>
           </div>
           <div class="contact-socials">
-            <a href="https://github.com/Rahul025-max" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/codingwithrahul965" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:217455023+codingwithrahul965@users.noreply.github.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
 
@@ -444,7 +560,7 @@
     <div class="footer-content">
       <a href="#home" class="footer-logo">RM<span>.</span></a>
       <p>Designed & Built by <strong>Rahul Mittal</strong></p>
-      <p class="footer-copy">&copy; 2025 — All Rights Reserved</p>
+      <p class="footer-copy">&copy; 2026 - All Rights Reserved</p>
     </div>
   </footer>
 
@@ -453,6 +569,35 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <script src="scriptt.js"></script>
+  <script src="script.js"></script>
+  
+  <!-- AI Chatbot Widget -->
+<div id="bot-container">
+    <div id="bot-window">
+        <div class="bot-header">
+            <div class="dot"></div>
+            <strong>RM Assistant</strong>
+        </div>
+        <div id="bot-messages">
+            <div class="msg bot-msg">Hi! I'm Rahul's AI. Ask me about his skills, projects, or education!</div>
+        </div>
+        <div class="bot-suggestions">
+            <button class="suggest-btn" onclick="askBot('What are your skills?')">Skills</button>
+            <button class="suggest-btn" onclick="askBot('Show me your projects')">Projects</button>
+            <button class="suggest-btn" onclick="askBot('Contact info')">Contact</button>
+        </div>
+        <div class="bot-input-area">
+            <input type="text" id="bot-input" placeholder="Type a message...">
+            <button id="bot-send" class="btn-primary" style="padding: 10px;"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <button id="bot-toggle" aria-label="Open Chatbot">
+        <i class="fas fa-robot"></i>
+    </button>
+</div>
+
+<!-- Add styles and script -->
+<link rel="stylesheet" href="bot-style.css">
+<script src="bot-script.js"></script>
 </body>
-</html> 
+</html>
