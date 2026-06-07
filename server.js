@@ -1,3 +1,8 @@
+require("dotenv").config();
+
+const Contact = require("./models/Contact");
+const connectDB = require("./db");
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -6,6 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.static(__dirname));
+connectDB();
 
 // Knowledge Base for Rahul Mittal
 const botData = {
@@ -31,6 +37,53 @@ app.post('/api/chat', (req, res) => {
 
     res.json({ reply: response });
 });
+app.post("/api/contact", async (req, res) => {
 
+    try {
+
+        const { name, email, subject, message } = req.body;
+
+        if (!name || !email || !subject || !message) {
+
+            return res.status(400).json({
+                success: false,
+                message: "All fields required"
+            });
+
+        }
+
+        const newMessage = await Contact.create({
+            name,
+            email,
+            subject,
+            message
+        });
+
+        res.json({
+            success: true,
+            data: newMessage
+        });
+
+    } catch (error) {
+
+        console.log(error);
+
+        res.status(500).json({
+            success: false,
+            message: "Server Error"
+        });
+
+    }
+
+});
+
+app.get("/api/messages", async (req, res) => {
+
+    const messages = await Contact.find()
+        .sort({ createdAt: -1 });
+
+    res.json(messages);
+
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

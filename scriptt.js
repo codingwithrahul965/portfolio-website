@@ -533,3 +533,60 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+// ===== CONTACT FORM TO MONGODB =====
+
+const contactForm = document.getElementById("contact-form");
+const formMessage = document.getElementById("form-message");
+
+contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("input-name").value;
+    const email = document.getElementById("input-email").value;
+    const subject = document.getElementById("input-subject").value;
+    const message = document.getElementById("input-message").value;
+
+    formMessage.textContent = "Sending...";
+
+    try {
+
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                subject,
+                message
+            })
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+
+            formMessage.textContent = "✅ Message sent successfully!";
+            formMessage.style.color = "lightgreen";
+
+            contactForm.reset();
+
+        } else {
+
+            formMessage.textContent = "❌ Failed to send message";
+            formMessage.style.color = "red";
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        formMessage.textContent = "❌ Server error";
+        formMessage.style.color = "red";
+
+    }
+
+});
